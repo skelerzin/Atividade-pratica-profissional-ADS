@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSena Studio - Tatuagem em Vila Velha</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+  <script src="path/to/your/script.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">      
+    <a class="navbar-brand" href="#">GSena Studio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#Sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="banner" style="position: absolute; top: 0; left: 0; width: 100%; height: 300px; background: url('banner.jpg') no-repeat center center; pointer-events: none;">
+    <!-- Banner decorativo -->
+  </div>
+  
+  <!-- Header -->
+  <header class="header bg-secondary text-white py-5" style="position: relative; z-index: 10;">
+    <div class="container text-center">
+      <h1>Bem-vindo ao GSena Studio</h1>
+      <p>Arte e expressão em cada tatuagem. Venha nos conhecer em Vila Velha.</p>
+      <a href="https://www.instagram.com/gsena.tattoo/" target="_blank" class="btn btn-light" style="position: relative; z-index: 20; margin-top: 30px;">Veja Nosso Trabalho</a>
+    </div>
+  </header>
+  
+
+  <!-- Sobre o Studio -->
+  <section id="sobre" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center text-primary">Sobre o Gabriel Sena</h2>
+      <p class="text-center">Desde pequeno, Gabriel sonhava em ser tatuador, fascinado pela arte. Apesar das dificuldades e das dúvidas ao redor, ele decidiu seguir seu sonho. Trabalhou duro, praticou sempre que podia. Aos poucos, sua dedicação começou a dar frutos, e hoje ele vê seus desenhos ganharem vida na pele das pessoas, cada tatuagem contando uma história.</p>
+    </div>
+  </section>
+
+  <!-- Galeria de Tatuagens -->
+  <section id="galeria" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center text-primary">Estilos de tatuagem</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="img/tatuagem_realista.png" class="card-img-top img-fluid" alt="Tatuagem Realismo">
+            <div class="card-body">
+              <h5 class="card-title">Realismo</h5>
+              <p class="card-text">Desenhos realistas que impressionam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="img/tatuagem_oldschool.png" class="card-img-top img-fluid" alt="Tatuagem Old School">
+            <div class="card-body">
+              <h5 class="card-title">Old School</h5>
+              <p class="card-text">Estilo clássico e cheio de personalidade.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="img/tatuagem_minimalista.png" class="card-img-top img-fluid" alt="Tatuagem Minimalista">
+            <div class="card-body">
+              <h5 class="card-title">Minimalista</h5>
+              <p class="card-text">Simplicidade e elegância em cada traço.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Seção de Comentários -->
+  <section id="comentarios" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center text-primary">Deixe seu comentário</h2>
+      <form id="comentario-form">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="comentario" class="form-label">Comentário</label>
+          <textarea class="form-control" id="comentario" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Comentário</button>
+      </form>
+      <div id="mensagem" class="mt-3"></div>
+    </div>
+  </section>
+
+  <!-- Promoções -->
+  <section id="promocoes" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center text-primary">Promoções</h2>
+      <p class="text-center">Aproveite nossas ofertas especiais!</p>
+      <!-- Adicionando a classe row para agrupar as promoções -->
+      <div class="row">
+        <!-- Promoção Flash Tattoo -->
+        <div class="col-md-4 mb-4 promo-item">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Sessão de Flash Tattoo por R$ 150,00</h5>
+              <p class="card-text">Escolha entre uma variedade de desenhos prontos e faça uma tatuagem rápida e estilosa!</p>
+              <a href="https://www.instagram.com/gsena.tattoo/" target="_blank" class="btn btn-primary">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Promoção Desconto para Grupos -->
+        <div class="col-md-4 mb-4 promo-item">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Desconto para Grupos</h5>
+              <p class="card-text">Venha com um amigo e ganhe um desconto de 10% em cada tatuagem. Quanto mais amigos, maior o desconto!</p>
+              <a href="https://www.instagram.com/gsena.tattoo/" target="_blank" class="btn btn-primary">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Promoção Desconto Minimalista -->
+        <div class="col-md-4 mb-4 promo-item">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Desconto de 20% em Tatuagens Minimalistas</h5>
+              <p class="card-text">Promoção válida até o final do mês. Venha garantir sua tatuagem com um design exclusivo e minimalista!</p>
+              <a href="https://www.instagram.com/gsena.tattoo/" target="_blank" class="btn btn-primary">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="text-primary">Contato</h2>
+      <p>Quer agendar uma sessão ou tirar dúvidas? Entre em contato conosco!</p>
+
+      <!-- Botão de Contato com ícones de WhatsApp e Instagram -->
+      <a href="https://wa.me/+5527988386258" target="_blank" class="btn btn-success">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://www.instagram.com/gsena.tattoo/" target="_blank" class="btn btn-danger ml-2">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+
+      <p id="message" style="display: none; margin-top: 10px;">Obrigado pelo interesse! Nossa equipe entrará em contato em breve.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 GSena Studio | Tatuagem na Rua Santa Cruz - Glória, Vila Velha</p>
+  </footer>
+
+
+  <script>
+    // Rolagem suave para links de navegação
+    $("a.nav-link").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+          window.location.hash = hash;
+        });
+      } 
+    });
+
+    // Alternando promoções
+    let promoIndex = 0;
+    const promoItems = $(".promo-item");
+    const totalPromos = promoItems.length;
+    
+    function switchPromo() {
+      promoItems.hide(); // Esconde todas as promoções
+      promoItems.eq(promoIndex).fadeIn(); // Exibe a promoção atual
+      promoIndex = (promoIndex + 1) % totalPromos; // Incrementa o índice e volta ao 0 após o último
+    }
+  
+  </script>
+<script>
+  // Inicializando o ScrollMagic Controller
+  const controller = new ScrollMagic.Controller();
+
+  // Seleciona todos os elementos com a classe "card-body" dentro das promoções
+  const targetElements = document.querySelectorAll('#promocoes .card-body');
+
+  // Aplica a animação em cada elemento individualmente
+  targetElements.forEach((element) => {
+    // Configura a animação com GSAP - Aparecimento suave de baixo para cima
+    gsap.from(element, {
+      opacity: 0,        // Começa invisível
+      y: 50,             // Começa ligeiramente abaixo
+      duration: 3,       // Duração da animação
+      ease: "power2.out" // Efeito de animação suave
+    });
+
+    // Configura o ScrollMagic Scene para acionar a animação ao aparecer na viewport
+    new ScrollMagic.Scene({
+        triggerElement: element, // Inicia a animação ao alcançar esse elemento
+        triggerHook: 0.7         // Aciona a animação um pouco antes de o elemento entrar na tela
+    })
+    .setTween(gsap.to(element, { opacity: 1, y: 0 })) // Define a animação para mover de baixo para o centro
+    .addTo(controller); // Adiciona a cena ao controller
+  });
+</script>
+</body>
+</html>
